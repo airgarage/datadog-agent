@@ -18,7 +18,7 @@ ENV DD_PROCESS_AGENT_ENABLED=true
 ARG RENDER_SERVICE_NAME=datadog
 
 # Copy configuration files
-COPY configs/gunicorn.d/conf.yaml /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
+# COPY configs/gunicorn.d/conf.yaml /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
 
 ENV DD_BIND_HOST=$RENDER_SERVICE_NAME
 ENV DD_HOSTNAME=$RENDER_SERVICE_NAME
