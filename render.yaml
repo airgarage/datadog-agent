@@ -6,3 +6,9 @@ services:
     envVars:
       - key: DD_API_KEY
         sync: false
+      - key: DD_POSTGRES_HOST
+        sync: false
+      - key: DD_POSTGRES_USER
+        sync: false
+      - key: DD_POSTGRES_PASSWORD
+        sync: false
