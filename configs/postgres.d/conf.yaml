@@ -30,6 +30,9 @@ instances:
     ## Set to `true` to enable Database Monitoring.
     dbm: true
 
+    collect_schemas:
+      enabled: true
+
     ## Define the configuration for database autodiscovery.
     ## Complete this section if you want to auto-discover databases on this host
     ## instead of specifying each using dbname.
