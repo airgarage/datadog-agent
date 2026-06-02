@@ -25,3 +25,18 @@ instances:
     # @param disable_generic_tags - boolean - optional - default: false
     # The integration will stop sending server tag as is redundant with host tag
     disable_generic_tags: true
+
+    ## @param dbm - boolean - optional - default: false
+    ## Set to `true` to enable Database Monitoring.
+    dbm: true
+
+    ## Define the configuration for database autodiscovery.
+    ## Complete this section if you want to auto-discover databases on this host
+    ## instead of specifying each using dbname.
+    database_autodiscovery:
+      ## @param enabled - boolean - optional - default: false
+      ## Enable database autodiscovery.
+      enabled: true
+      ## @param global_view_db - string - optional - default: postgres
+      ## Database the agent connects to perform autodiscovery operations
+      global_view_db: "%%env_DD_POSTGRES_DBNAME%%"
