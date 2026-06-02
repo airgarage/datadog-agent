@@ -1,0 +1,27 @@
+init_config:
+
+instances:
+  ## @param host - string - required
+  ## The hostname to connect to.
+  ## NOTE: Even if the server name is "localhost", the agent connects to
+  ## PostgreSQL using TCP/IP, unless you also provide a value for the sock key.
+  #
+  - host: "%%env_DD_POSTGRES_HOST%%"
+
+    ## @param port - integer - optional - default: 5432
+    ## The port to use when connecting to PostgreSQL.
+    #
+    # port: 5432
+
+    username: "%%env_DD_POSTGRES_USER%%"
+    password: "%%env_DD_POSTGRES_PASSWORD%%"
+
+    ## @param dbname - string - optional - default: postgres
+    ## The name of the PostgresSQL database to monitor.
+    ## Note: If omitted, the default system Postgres database is queried.
+    #
+    dbname: "%%env_DD_POSTGRES_DBNAME%%"
+
+    # @param disable_generic_tags - boolean - optional - default: false
+    # The integration will stop sending server tag as is redundant with host tag
+    disable_generic_tags: true
