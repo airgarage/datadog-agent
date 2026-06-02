@@ -12,3 +12,5 @@ services:
         sync: false
       - key: DD_POSTGRES_PASSWORD
         sync: false
+      - key: DD_POSTGRES_DBNAME
+        sync: false

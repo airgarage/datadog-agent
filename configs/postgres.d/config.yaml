@@ -20,7 +20,7 @@ instances:
     ## The name of the PostgresSQL database to monitor.
     ## Note: If omitted, the default system Postgres database is queried.
     #
-    # dbname: <DBNAME>
+    dbname: "%%env_DD_POSTGRES_DBNAME%%"
 
     # @param disable_generic_tags - boolean - optional - default: false
     # The integration will stop sending server tag as is redundant with host tag
