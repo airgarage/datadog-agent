@@ -1,0 +1,14 @@
+init_config:
+
+instances:
+  - openmetrics_endpoint: "http://%%env_DD_PGDOG_HOST%%:9090/metrics"
+    namespace: pgdog
+    raw_metric_prefix: pgdog_
+    metrics:
+      - ".*"
+    tags:
+      - service:pgdog
+      - env:prod
+      - pgdog_instance:%%env_DD_PGDOG_HOST%%
+    min_collection_interval: 15
+    timeout: 5
