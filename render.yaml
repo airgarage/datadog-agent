@@ -14,3 +14,5 @@ services:
         sync: false
       - key: DD_POSTGRES_DBNAME
         sync: false
+      - key: DD_PGDOG_HOST
+        sync: false
